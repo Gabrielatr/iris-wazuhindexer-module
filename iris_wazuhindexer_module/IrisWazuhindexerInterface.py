@@ -123,16 +123,25 @@ class IrisWazuhindexerInterface(IrisModuleInterface):
         in_status = InterfaceStatus.IIStatus(code=InterfaceStatus.I2CodeNoError)
 
         for element in data:
-            # Check that the IOC we receive is of type the module can handle and dispatch
             if 'domain' in element.ioc_type.type_name:
+                # json dump the IOC object to get a dict
+                json_ioc = element.to_json()
+
+                self.log.info(f'Handling domain {json_ioc}')
                 status = wazuhindexer_handler.handle_domain(ioc=element)
                 in_status = InterfaceStatus.merge_status(in_status, status)
 
-            #elif element.ioc_type.type_name in ['md5', 'sha224', 'sha256', 'sha512']:
-            #    status = wazuhindexer_handler.handle_hash(ioc=element)
-            #    in_status = InterfaceStatus.merge_status(in_status, status)
-            #
-            # elif element.ioc_type.type_name in etc...
+            if 'ip-' in element.ioc_type.type_name:
+                status = wazuhindexer_handler.handle_ip(ioc=element)
+                in_status = InterfaceStatus.merge_status(in_status, status)
+
+            if 'sha256' in element.ioc_type.type_name:
+                status = wazuhindexer_handler.handle_filehash(ioc=element)
+                in_status = InterfaceStatus.merge_status(in_status, status)
+
+            if 'filename' in element.ioc_type.type_name:
+                status = wazuhindexer_handler.handle_filename(ioc=element)
+                in_status = InterfaceStatus.merge_status(in_status, status)
 
             else:
                 self.log.error(f'IOC type {element.ioc_type.type_name} not handled by wazuhindexer module. Skipping')
