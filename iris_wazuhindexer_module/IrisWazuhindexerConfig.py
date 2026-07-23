@@ -10,8 +10,8 @@
 
 module_name = "IrisWazuhindexer"
 module_description = ""
-interface_version = 1.1
-module_version = 1.0
+interface_version = 1.2
+module_version = 1.1
 
 pipeline_support = False
 pipeline_info = {}
