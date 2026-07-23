@@ -1,0 +1,13 @@
+AUTHORS.txt
+LICENSE
+README.md
+setup.py
+iris_wazuhindexer_module/IrisWazuhindexerConfig.py
+iris_wazuhindexer_module/IrisWazuhindexerInterface.py
+iris_wazuhindexer_module/__init__.py
+iris_wazuhindexer_module.egg-info/PKG-INFO
+iris_wazuhindexer_module.egg-info/SOURCES.txt
+iris_wazuhindexer_module.egg-info/dependency_links.txt
+iris_wazuhindexer_module.egg-info/top_level.txt
+iris_wazuhindexer_module/wazuhindexer_handler/__init__.py
+iris_wazuhindexer_module/wazuhindexer_handler/wazuhindexer_handler.py
