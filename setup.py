@@ -2,8 +2,8 @@ from setuptools import setup
 
 setup(
     name='iris-wazuhindexer-module',
-    python_requires='>=3.10',
-    version='0.1.1',
+    python_requires='>=3.9',
+    version='0.1.0',
     packages=['iris_wazuhindexer_module', 'iris_wazuhindexer_module.wazuhindexer_handler'],
     url='https://github.com/iris_wazuhindexer_module/iris-wazuhindexer-module',
     license='MIT',
