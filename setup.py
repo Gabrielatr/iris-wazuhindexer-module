@@ -10,5 +10,5 @@ setup(
     author='Gabrielatr',
     author_email='hello@iris-wazuhindexer-module.com',
     description='`iris-wazuhindexer-module` is a IRIS pipeline/processor module created with https://github.com/dfir-iris/iris-skeleton-module',
-    install_requires=['opensearch-py>=3.2.0']
+    install_requires=['opensearch-py==3.0.0']
 )
