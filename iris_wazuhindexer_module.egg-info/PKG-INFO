@@ -1,11 +1,11 @@
 Metadata-Version: 2.1
 Name: iris-wazuhindexer-module
-Version: 0.1.1
+Version: 0.1.0
 Summary: `iris-wazuhindexer-module` is a IRIS pipeline/processor module created with https://github.com/dfir-iris/iris-skeleton-module
 Home-page: https://github.com/iris_wazuhindexer_module/iris-wazuhindexer-module
 Author: Gabrielatr
 Author-email: hello@iris-wazuhindexer-module.com
 License: MIT
-Requires-Python: >=3.10
+Requires-Python: >=3.9
 License-File: LICENSE
 License-File: AUTHORS.txt
