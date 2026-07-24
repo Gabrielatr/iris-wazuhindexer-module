@@ -15,7 +15,6 @@ from jinja2 import Template
 from opensearchpy import OpenSearch
 import dateutil.parser
 from datetime import datetime
-import pytz
 
 import operator
 
